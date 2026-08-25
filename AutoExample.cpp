@@ -12,7 +12,6 @@ uint8 AutoExample::GetAutomate() {
 	return AUTOEXAMPLE_FSM;
 }
 
-/* This function actually connnects the AutoExamplee with the mailbox. */
 uint8 AutoExample::GetMbxId() {
 	return AUTOEXAMPLE_MBX_ID;
 }
@@ -46,7 +45,6 @@ void AutoExample::Initialize() {
 	StartTimer(TIMER1_ID);
 }
 
-/* Initial system message */
 void AutoExample::Start() {
 	printf("AutoExample[%d]::Start() - send message !\n", GetObjectId());
 	PrepareNewMessage(0x00, MSG_CHANGE_STATE);
@@ -61,7 +59,7 @@ void AutoExample::S0_ChangeState() {
 }
 
 void AutoExample::S1_ChangeState() {
-	printf("AutoExample[%d]::S1_ChangeState() - istekla je vremenska kontrola !\n", GetObjectId());
+	printf("AutoExample[%d]::S1_ChangeState() !\n", GetObjectId());
 	SetState(AUTO_STATE1);
 	StopTimer(TIMER1_ID);
 }
