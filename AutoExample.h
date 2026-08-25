@@ -15,7 +15,6 @@ class AutoExample : public FiniteStateMachine {
 
 	StandardMessage StandardMsgCoding;
 
-	/* FiniteStateMachine abstract functions */
 	MessageInterface* GetMessageInterface(uint32 id);
 	void	SetDefaultHeader(uint8 infoCoding);
 	void	SetDefaultFSMData();
